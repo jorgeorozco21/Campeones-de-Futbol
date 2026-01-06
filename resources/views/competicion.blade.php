@@ -8,5 +8,6 @@
     </head>
     <body>
         <x-competicion />
+        <x-campeones />
     </body>
 </html>
