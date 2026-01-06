@@ -8,10 +8,16 @@
             <div class="flex flex-col items-center mb-4 max-w-[952px] w-full mx-auto">
 
                 <!-- TÍTULO -->
-                <h2 class="text-3xl text-white font-bold">Palmares Historico de la Premier League</h2>
+                <h2 class="text-3xl text-white font-bold text-center lg:text-left">
+                    Palmares de la Premier League
+                </h2>
                 <hr class="w-[95%] border border-white mt-2 mb-2">
-                <div class="w-[95%] flex items-start">
-                    <p class="text-white"> Aquí se muestra la tabla con el número de campeonatos ganados por cada equipo: </p>
+
+                <!-- PÁRRAFO -->
+                <div class="w-[95%] flex flex-col items-center lg:items-start">
+                    <p class="text-white text-center lg:text-left">
+                        Aquí se muestra la tabla con el número de campeonatos ganados por cada equipo:
+                    </p>
                 </div>
             </div>
 
