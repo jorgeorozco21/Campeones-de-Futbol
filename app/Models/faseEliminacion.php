@@ -16,7 +16,9 @@ class faseEliminacion extends Model
         "ID_Equipo2",
         "Tipo",
         "ID_Torneo",
-        "ID_Resultado"
+        "ID_Resultado",
+        "Fase",
+        "Llave"
     ];
 
     public function equipo1() {
