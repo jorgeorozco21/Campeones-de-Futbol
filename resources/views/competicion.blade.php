@@ -9,5 +9,7 @@
     <body>
         <x-competicion />
         <x-campeones />
+        <x-carta-campeon />
+        <x-tabla-campeon />
     </body>
 </html>

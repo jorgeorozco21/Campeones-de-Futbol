@@ -12,13 +12,9 @@
 
             <!-- CONTENIDO -->
             <div class="flex flex-col md:flex-row items-center gap-6 md:gap-10">
-                <img 
-                    src="{{ asset('images/premier_league.webp') }}"
-                    alt="Logo de la Premier League"
-                    class="w-40 md:w-56 lg:w-64 object-contain"
-                >
+                <img src="{{ asset('images/premier_league.webp') }}" alt="Logo de la Premier League" class="w-40 md:w-56 lg:w-64 object-contain">
 
-                <p class="text-white text-sm md:text-base leading-relaxed">
+                <p class="w-[95%] text-white text-sm md:text-base leading-relaxed text-center md:text-left">
                     La Premier League es la primera división del fútbol profesional de Inglaterra y una de las ligas más importantes y seguidas del mundo. Se disputa desde 1992, cuando los clubes se separaron de la antigua Football League First Division para crear una competición más moderna y comercial.
                     <br><br>
                     Está compuesta por 20 equipos, que juegan 38 jornadas (ida y vuelta). El equipo que suma más puntos al final de la temporada se corona campeón, mientras que los tres últimos descienden a la Championship.
