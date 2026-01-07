@@ -1,13 +1,8 @@
 <section class="w-full bg-[#3B9D36] pt-6">
     <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-4 gap-8 px-6">
-
-        <!-- CONTENIDO PRINCIPAL -->
         <div class="lg:col-span-3 flex flex-col items-center">
-
-            <!-- CONTENEDOR ALINEADO AL HR -->
             <div class="w-[95%]">
 
-                <!-- GRID DE CARDS -->
                 <div class="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-4 xl:grid-cols-6 gap-4">
                     
                     <!-- CARD -->
@@ -26,8 +21,6 @@
                             </span>
                         </div>
                     </div>
-
-                    
 
                     <!-- CARD -->
                     <div class="bg-white rounded-lg shadow-md overflow-hidden 
@@ -113,8 +106,7 @@
                             </span>
                         </div>
                     </div>
-                    <!-- Duplica cards según necesites -->
-                </div>
+                </div>   
             </div>
         </div>
     </div>

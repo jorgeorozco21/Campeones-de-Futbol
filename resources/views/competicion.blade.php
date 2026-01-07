@@ -11,5 +11,7 @@
         <x-campeones />
         <x-carta-campeon />
         <x-tabla-campeon />
+        <x-sugerencias />
+        <x-footer />
     </body>
 </html>
