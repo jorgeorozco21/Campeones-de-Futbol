@@ -32,18 +32,43 @@ class EquipoController extends Controller
      */
     public function store(Request $request)
     {
+        
         $datosEquipo = $request->except('_token');
+        
+        if ($datosEquipo['tipoInsercion'] == 'normal'){
+            $request->validate([
+                "Nombre" => "required|string|max:255",
+                "Escudo" => "required|image|max:2048|mimes:png,jpg,jpeg,webp,svg"
+            ],[
+                "Nombre.required" => "El nombre es obligatorio",
+                "Escudo.required" => "Debes subir un escudo",
+                "Escudo.image" => "El archivo debe ser una imagen",
+                "Escudo.mimes" => "Se se permiten imagenes png, jpg, jpeg, webp o svg",
+                "Escudo.max" => "La imagen no debe de superar los 2MB"
+            ]);
 
-        if ($request->hasFile('Escudo')){
-            $datosEquipo['Escudo'] = $request->file('Escudo')->store('uploads','public');
+            $datosEquipo = $request->except('_token','tipoInsercion');
+
+            if ($request->hasFile('Escudo')){
+                $datosEquipo['Escudo'] = $request->file('Escudo')->store('uploads','public');
+            }
+            Equipo::insert($datosEquipo);
+        }else if ($datosEquipo['tipoInsercion'] == 'cargaMasiva'){
+            $archivo = $request->file('archivo');
+            $contenido = file_get_contents($archivo->getRealPath());
+            $datosEquipo = json_decode($contenido, true);
+
+            foreach ($datosEquipo as $equipo){
+                $equipo['Escudo'] = "uploads/".$equipo['Escudo'];
+                Equipo::insert($equipo);
+            }
         }
 
-        Equipo::insert($datosEquipo);
+        return redirect()->route('Equipo.create')->with('success','Informacion agregada correctamente');
 
         // Debugar la API
         //return response()->json($datosEquipo);
 
-        return redirect()->route('Equipo.index')->with('success','Equipo agregado correctamente');
     }
 
     /**
@@ -68,6 +93,16 @@ class EquipoController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $request->validate([
+            "Nombre" => "required|string|max:255",
+            "Escudo" => "image|max:2048|mimes:png,jpg,jpeg,webp,svg"
+        ],[
+            "Nombre.required" => "El nombre es obligatorio",
+            "Escudo.image" => "El archivo debe ser una imagen",
+            "Escudo.mimes" => "Se se permiten imagenes png, jpg, jpeg, webp o svg",
+            "Escudo.max" => "La imagen no debe de superar los 2MB"
+        ]);
+
         $datosEquipo = $request->except('_token','_method');
 
         if ($request->hasFile('Escudo')){
@@ -78,7 +113,7 @@ class EquipoController extends Controller
 
         Equipo::where('id','=',$id)->update($datosEquipo);
 
-        return redirect()->route('Equipo.index')->with('success','Equipo editado correctamente');
+        return redirect()->route('Equipo.edit',$id)->with('success','Equipo editado correctamente');
     }
 
     /**

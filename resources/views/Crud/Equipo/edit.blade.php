@@ -1,5 +1,41 @@
-<form method="post" action="{{ url('Crud/Equipo/'.$equipo->id) }}" enctype="multipart/form-data">
-    @csrf
-    {{ method_field('PATCH') }}
-    @include ('Crud.Equipo.form')
-</form>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Editar Equipos</title>
+        <link rel="stylesheet" href="{{ asset('css/styles_crud.css') }}">
+    </head>
+    <body class="body-especial">
+        <!--<div class="alerta errores">hola</div>-->
+        @if ($errors->any())
+            <div class="alerta errores">
+                <h2>Errores</h2>
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+        @if (session('success'))
+            <div class="alerta success">
+                <ul>
+                    <li>{{ session('success') }}</li>
+                </ul>
+            </div>
+        @endif
+        <a href="{{ url('Crud/Equipo/') }}" class="boton agregar">Regresar</a>
+        <main class="main-especial">
+            <div class="formulario-editar">
+                <h2>Editar Equipo</h2>
+                <form method="post" action="{{ url('Crud/Equipo/'.$equipo->id) }}" enctype="multipart/form-data">
+                    @csrf
+                    {{ method_field('PATCH') }}
+                    @include ('Crud.Equipo.form',['modo' => 'Editar'])
+                </form>
+            </div>
+        </main>
+        @vite('resources/js/alertas.js')
+    </body>
+</html>

@@ -1,11 +1,10 @@
 <label for="nombre">Nombre</label>
-<input type="text" name="Nombre" id="nombre" required value="{{ $equipo->Nombre }}">
+<input type="text" name="Nombre" id="nombre" value="{{ isset($equipo->Nombre)?$equipo->Nombre:old('Nombre') }}">
 <br>
 <label for="escudo">Escudo</label>
-<img src="{{ asset('storage').'/'.$equipo->Escudo }}">
 <input type="file" name="Escudo" id="escudo" value="">
 <br>
 <label for="colores">Colores</label>
-<input type="text" name="Colores" id="colores" value="{{ $equipo->Colores }}">
+<input type="text" name="Colores" id="colores" value="{{ isset($equipo->Colores)?$equipo->Colores:old('Colores') }}">
 <br>
-<input type="submit" value="Guardar Datos">
+<input type="submit" value="{{$modo}} Datos" class="boton editar">

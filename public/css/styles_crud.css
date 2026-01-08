@@ -2,9 +2,173 @@ body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+    background-color: #fff;
 }
 
-a {
-    text-decoration: none;
+.body-especial {
+    background-color: #eee;
+}
+
+main {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+h2 {
+    margin: 5px 0;
+}
+
+.main-especial {
+    padding: 60px 0;
+}
+
+.encabezado {
+    padding: 20px 0;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    font-size: 3rem;
+    margin: 0;
+    background-color: #3b9d36;
+}
+
+.texto {
+    width: 90%;
+    padding: 20px 15px;
+}
+
+.info {
     font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.link {
+    text-decoration: none;
+    margin: 5px 0;
+    font-size: 1.3rem;
+}
+
+.funciones {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    background-color: #3b9d36;
+    width: 95%;
+    padding: 10px 0;
+    border-radius: 5px 5px 0 0;
+    grid-template-areas: "agregar buscador regresar";
+}
+
+form {
+    display: inline-block;
+}
+
+.informacion {
+    width: 95%;
+    padding: 30px;
+    background-color: #fff;
+    border-collapse: separate;
+    border-spacing: 10px 0;
+    border-radius: 0 0 15px 15px;
+}
+
+.columna {
+    color: #222;
+    padding: 5px 5px;
+    border-bottom: 2px solid #111;
+    text-align: center;
+}
+
+.principal {
+    color: #000;
+    font-size: 1.2rem;
+}
+
+.escudo {
+    width: 50px;
+}
+
+.boton {
+    display: inline-block;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 15px;
+}
+
+.editar {
+    background-color: #48e;
+    text-decoration: none;
+    color: #fff;
+}
+
+.borrar {
+    background-color: #f00;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.agregar {
+    grid-area: agregar;
+    width: 75px;
+    margin: 5px 20px;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+}
+
+.regresar {
+    justify-self: end;
+    text-align: end;
+    width: 67px;
+    margin: 5px 20px;
+    grid-area: regresar;
+    background-color: #fff;
+    text-decoration: none;
+    color: #000;
+}
+
+label {
+    font-size: 1.3rem;
+}
+
+.formulario-crear {
+    width: 25%;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+input[type="text"],
+input[type="file"] {
+    width: 100%;
+    padding: 5px;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+
+.formulario-editar {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+.alerta {
+    width: 60%;
+    padding: 0 5px;
+    position: fixed;
+    left: 20%;
+}
+
+.errores {
+    background-color: #f006;
+    border: 2px solid #f00e;
+    color: #f00;
+}
+
+.success {
+    padding: 10px 5px;
+    background-color: #48e;
+    border: 2px solid #00f8;
+    color: #00f8;
 }
