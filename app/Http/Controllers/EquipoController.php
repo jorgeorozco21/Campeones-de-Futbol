@@ -38,20 +38,17 @@ class EquipoController extends Controller
         if ($datosEquipo['tipoInsercion'] == 'normal'){
             $request->validate([
                 "Nombre" => "required|string|max:255",
-                "Escudo" => "required|image|max:2048|mimes:png,jpg,jpeg,webp,svg"
+                "Escudo" => "required|string|max:255"
             ],[
                 "Nombre.required" => "El nombre es obligatorio",
-                "Escudo.required" => "Debes subir un escudo",
-                "Escudo.image" => "El archivo debe ser una imagen",
-                "Escudo.mimes" => "Se se permiten imagenes png, jpg, jpeg, webp o svg",
-                "Escudo.max" => "La imagen no debe de superar los 2MB"
+                "Escudo.required" => "El escudo es obligatorio",
+                "Escudo.max" => "Excediste el tamaño maximo de la liga"
             ]);
 
             $datosEquipo = $request->except('_token','tipoInsercion');
 
-            if ($request->hasFile('Escudo')){
-                $datosEquipo['Escudo'] = $request->file('Escudo')->store('uploads','public');
-            }
+            $datosEquipo['Escudo'] = "uploads/".$datosEquipo['Escudo'];
+
             Equipo::insert($datosEquipo);
         }else if ($datosEquipo['tipoInsercion'] == 'cargaMasiva'){
             $archivo = $request->file('archivo');
@@ -95,21 +92,17 @@ class EquipoController extends Controller
     {
         $request->validate([
             "Nombre" => "required|string|max:255",
-            "Escudo" => "image|max:2048|mimes:png,jpg,jpeg,webp,svg"
+            "Escudo" => "required|string|max:255"
         ],[
             "Nombre.required" => "El nombre es obligatorio",
-            "Escudo.image" => "El archivo debe ser una imagen",
-            "Escudo.mimes" => "Se se permiten imagenes png, jpg, jpeg, webp o svg",
-            "Escudo.max" => "La imagen no debe de superar los 2MB"
+            "Escudo.required" => "El escudo es obligatorio",
+            "Escudo.max" => "Excediste el tamaño maximo de la liga"
         ]);
 
         $datosEquipo = $request->except('_token','_method');
 
-        if ($request->hasFile('Escudo')){
-            $equipo = Equipo::findOrFail($id);
-            Storage::disk('public')->delete($equipo->Escudo);
-            $datosEquipo['Escudo'] = $request->file('Escudo')->store('uploads','public');
-        }
+        $equipo = Equipo::findOrFail($id);
+        Storage::disk('public')->delete($equipo->Escudo);
 
         Equipo::where('id','=',$id)->update($datosEquipo);
 
@@ -121,12 +114,9 @@ class EquipoController extends Controller
      */
     public function destroy($id)
     {
-
         $equipo = Equipo::findORFail($id);
 
-        if ($equipo->Escudo){
-            Storage::disk('public')->delete($equipo->Escudo);
-        }
+        Storage::disk('public')->delete($equipo->Escudo);
 
         $equipo->delete();
 

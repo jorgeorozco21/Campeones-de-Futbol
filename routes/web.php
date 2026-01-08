@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ConfederacionController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EquipoController;
 
@@ -13,3 +14,5 @@ Route::get('/Crud', function () {
 });
 
 Route::resource('/Crud/Equipo',EquipoController::class);
+
+Route::resource('/Crud/Confederacion',ConfederacionController::class);
