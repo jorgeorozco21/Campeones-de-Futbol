@@ -30,7 +30,16 @@
                 <h2>Crear Pais</h2>
                 <form method="post" action="{{ url('Crud/Pais') }}">
                     @csrf
+                    <input type="hidden" value="normal" name="tipoInsercion">
                     @include("Crud.Pais.form",["modo" => "Guardar"])
+                </form>
+                <h2>Carga Masiva</h2>
+                <form action="{{ url('Crud/Pais') }}" method="POST" enctype="multipart/form-data">
+                    @csrf
+                    <input type="hidden" name="tipoInsercion" value="cargaMasiva">
+                    <label for="archivo">Archivo</label>
+                    <input type="file" name="archivo" id="archivo">
+                    <input type="submit" value="Guardar Datos" class="boton editar">
                 </form>
             </div>
         </main>

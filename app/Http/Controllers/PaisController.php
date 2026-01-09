@@ -32,20 +32,33 @@ class PaisController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            "Nombre" => "required|string|max:255",
-            "Bandera" => "required|string|max:255"
-        ],[
-            "Nombre.required" => "El Nombre es obligatorio",
-            "Bandera.required" => "La Bandera es obligatoria",
-            "Bandera.max" => "Exediste el tamaño maximo de la liga"
-        ]);
-
         $datosPais = $request->except("_token");
 
-        $datosPais['Bandera'] = "uploads/".$datosPais['Bandera'];
+        if ($datosPais['tipoInsercion'] == "normal") {
+            $request->validate([
+                "Nombre" => "required|string|max:255",
+                "Bandera" => "required|string|max:255"
+            ],[
+                "Nombre.required" => "El Nombre es obligatorio",
+                "Bandera.required" => "La Bandera es obligatoria",
+                "Bandera.max" => "Exediste el tamaño maximo de la liga"
+            ]);
 
-        Pais::insert($datosPais);
+            $datosPais = $request->except("_token","tipoInsercion");
+
+            $datosPais['Bandera'] = "uploads/".$datosPais['Bandera'];
+
+            Pais::insert($datosPais);
+        }else if ($datosPais['tipoInsercion'] == "cargaMasiva"){
+            $archivo = $request->file('archivo');
+            $contenido = file_get_contents($archivo->getRealPath());
+            $datosPais = json_decode($contenido, true);
+
+            foreach ($datosPais as $pais) {
+                $pais['Bandera'] = "uploads/".$pais['Bandera'];
+                Pais::insert($pais);
+            }
+        }
 
         return redirect()->route("Pais.create")->with('success',"Informacion agregada correctamente");
 
