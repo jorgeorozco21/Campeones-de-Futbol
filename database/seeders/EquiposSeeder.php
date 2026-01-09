@@ -24,10 +24,20 @@ class EquiposSeeder extends Seeder
             $equipos = json_decode(File::get($archivo), true);
 
             foreach ($equipos as $equipo) {
+
+                // 🔧 Normalizar ruta del escudo
+                $escudo = $equipo['Escudo'];
+
+                if (!str_starts_with($escudo, 'uploads/')) {
+                    $escudo = 'uploads/' . $escudo;
+                }
+
                 DB::table('equipos')->updateOrInsert(
-                    ['Nombre' => $equipo['Nombre']], 
+                    ['Nombre' => $equipo['Nombre']],
                     [
-                        'Escudo' => $equipo['Escudo'],
+                        'Escudo' => $escudo,
+                        'updated_at' => now(),
+                        'created_at' => now(),
                     ]
                 );
             }
