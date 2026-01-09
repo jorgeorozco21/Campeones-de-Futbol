@@ -91,7 +91,9 @@ class ConfederacionController extends Controller
         $datosConfederacion = $request->except("_token","_method");
 
         $confederacion = Confederacion::findOrFail($id);
-        Storage::disk('public')->delete($confederacion->Logo);
+        if ($confederacion->Logo != $datosConfederacion['Logo']) {
+            Storage::disk('public')->delete($confederacion->Logo);
+        }
 
         Confederacion::where("id","=",$id)->update($datosConfederacion);
 

@@ -18,7 +18,7 @@
                     <ul>
                         <li><a href="{{ url("Crud/Equipo/") }}" class="link">Equipos</a></li>
                         <li><a href="{{ url("Crud/Confederacion/") }}" class="link">Confederaciones</a></li>
-                        <li><a href="" class="link"></a></li>
+                        <li><a href="{{ url("Crud/Pais/") }}" class="link">Paises</a></li>
                         <li><a href="" class="link"></a></li>
                         <li><a href="" class="link"></a></li>
                         <li><a href="" class="link"></a></li>

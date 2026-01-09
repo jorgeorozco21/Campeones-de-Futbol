@@ -1,12 +1,19 @@
 "use strict";
 
 document.addEventListener("DOMContentLoaded", ()=>{
-    const alerta = document.querySelector(".success");
+    const alerta1 = document.querySelector(".success");
+    const alerta2 = document.querySelector(".errores");
 
-    if (alerta) {
+    if (alerta1) {
         setTimeout(()=>{
-            alerta.style.display = "none";
+            alerta1.style.display = "none";
         },4000);
+    }
+
+    if (alerta2) {
+        setTimeout(()=>{
+            alerta2.style.display = "none";
+        },6000);
     }
 });
 

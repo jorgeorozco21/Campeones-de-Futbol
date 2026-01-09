@@ -102,7 +102,9 @@ class EquipoController extends Controller
         $datosEquipo = $request->except('_token','_method');
 
         $equipo = Equipo::findOrFail($id);
-        Storage::disk('public')->delete($equipo->Escudo);
+        if ($equipo->Escudo != $datosEquipo['Escudo']) {
+            Storage::disk('public')->delete($equipo->Escudo);
+        }
 
         Equipo::where('id','=',$id)->update($datosEquipo);
 
