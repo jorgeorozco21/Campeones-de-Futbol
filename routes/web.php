@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CompeticionController;
 use App\Http\Controllers\ConfederacionController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EquipoController;
@@ -19,3 +20,5 @@ Route::resource('/Crud/Equipo',EquipoController::class);
 Route::resource('/Crud/Confederacion',ConfederacionController::class);
 
 Route::resource('/Crud/Pais',PaisController::class);
+
+Route::resource('/Crud/Competicion',CompeticionController::class);

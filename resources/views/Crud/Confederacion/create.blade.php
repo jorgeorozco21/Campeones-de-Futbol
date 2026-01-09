@@ -27,7 +27,7 @@
         <a href="{{ url('Crud/Confederacion/') }}" class="boton agregar">Regresar</a>
         <main class="main-especial">
             <div class="formulario-crear">
-                <h2>Agregar Confederacion</h2>
+                <h2>Crear Confederacion</h2>
                 <form action="{{ url('Crud/Confederacion') }}" method="POST">
                     @csrf
                     @include('Crud.Confederacion.form',['modo' => 'Guardar'])
