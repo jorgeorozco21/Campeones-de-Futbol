@@ -55,7 +55,7 @@ class CompeticionController extends Controller
     {
         $datosCompeticion = $request->except('_token');
 
-        if ($datosCompeticion['tipoInsercion'] == 'Normal') {
+        if ($datosCompeticion['tipoInsercion'] == 'normal') {
             $request->validate([
                 "Nombre" => "required|string|max:255",
                 "Logo" => "required|string|max:255",

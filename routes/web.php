@@ -5,6 +5,7 @@ use App\Http\Controllers\ConfederacionController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EquipoController;
 use App\Http\Controllers\PaisController;
+use App\Http\Controllers\TorneoController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -26,3 +27,5 @@ Route::resource('/Crud/Confederacion',ConfederacionController::class);
 Route::resource('/Crud/Pais',PaisController::class);
 
 Route::resource('/Crud/Competicion',CompeticionController::class);
+
+Route::resource('/Crud/Torneo',TorneoController::class);

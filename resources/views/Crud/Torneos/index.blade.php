@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Paises</title>
+        <title>Torneos</title>
         <link rel="stylesheet" href="{{ asset('css/styles_crud.css') }}">
     </head>
     <body class="body-especial">
@@ -13,27 +13,29 @@
                 <!--<form>
                     <input type="text">
                 </form>-->
-                <a href="{{ url('Crud/Pais/create') }}" class="boton agregar">+ Agregar</a>
+                <a href="{{ url('Crud/Torneo/create') }}" class="boton agregar">+ Agregar</a>
                 <a href="{{ url('Crud') }}" class="boton regresar">Regresar</a>
             </div>
             <table class="informacion">
                 <tr>
                     <th class="columna principal">#</th>
-                    <th class="columna principal">Bandera</th>
-                    <th class="columna principal">Nombre del Pais</th>
+                    <th class="columna principal">Competicion</th>
+                    <th class="columna principal">Edicion</th>
+                    <th class="columna principal">Campeon</th>
                     <th class="columna principal acciones">Acciones</th>
                 </tr>
-                @foreach ($paises as $pais)
+                @foreach ($torneos as $torneo)
                     <tr>
-                        <td class="columna">{{ $pais->id}}</td>
-                        <td class="columna"><img src="{{ asset('storage').'/'.$pais->Bandera }}" class="escudo"></td>
-                        <td class="columna">{{ $pais->Nombre }}</td>
+                        <td class="columna">{{ $torneo->id}}</td>
+                        <td class="columna"><img src="{{ asset('storage').'/'.$torneo->Logo }}" class="escudo">{{ $torneo->nombreCompeticion }}</td>
+                        <td class="columna">{{ $torneo->Edicion }}</td>
+                        <td class="columna"><img src="{{ asset('storage').'/'.$torneo->Escudo }}" class="escudo">{{ $torneo->nombreEquipo }}</td>
                         <td class="columna editar-eliminar">
-                            <a href="{{ url('Crud/Pais/'.$pais->id.'/edit') }}" class="boton editar">Editar</a> 
-                            <form  action="{{ url('Crud/Pais/'.$pais->id) }}" method="post">
+                            <a href="{{ url('Crud/Torneo/'.$torneo->id.'/edit') }}" class="boton editar">Editar</a> 
+                            <form  action="{{ url('Crud/Torneo/'.$torneo->id) }}" method="post">
                                 @csrf
                                 {{ method_field('DELETE') }}
-                                <input type="submit" onclick="return confirm('Deseas borrar el pais ??')" value="Borrar" class="boton borrar">
+                                <input type="submit" onclick="return confirm('Deseas borrar el torneo ??')" value="Borrar" class="boton borrar">
                             </form>
                         </td>
                     </tr>
