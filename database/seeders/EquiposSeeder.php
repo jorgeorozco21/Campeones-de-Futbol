@@ -13,6 +13,7 @@ class EquiposSeeder extends Seeder
         $archivos = [
             database_path('seeders/data/equipos/uefa/equipos_inglaterra.json'),
             database_path('seeders/data/equipos/uefa/equipos_alemania.json'),
+            database_path('seeders/data/equipos/afc/equipos_corea_del_sur.json'),
         ];
 
         foreach ($archivos as $archivo) {
@@ -25,7 +26,6 @@ class EquiposSeeder extends Seeder
 
             foreach ($equipos as $equipo) {
 
-                // 🔧 Normalizar ruta del escudo
                 $escudo = $equipo['Escudo'];
 
                 if (!str_starts_with($escudo, 'uploads/')) {
