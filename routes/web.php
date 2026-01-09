@@ -15,6 +15,10 @@ Route::get('/Crud', function () {
     return view('Crud.index');
 });
 
+Route::get('/competicion', function () {
+    return view('competicion');
+});
+
 Route::resource('/Crud/Equipo',EquipoController::class);
 
 Route::resource('/Crud/Confederacion',ConfederacionController::class);
