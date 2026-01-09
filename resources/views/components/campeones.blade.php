@@ -18,25 +18,25 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                       d="M21 21l-4.35-4.35M10 18a8 8 0 100-16 8 8 0 000 16z"/>
                             </svg>
-                            <input class="w-full h-11 pl-10 pr-4 rounded-lg border-1 border-black focus:outline-none focus:ring-2 focus:ring-white/50"
+                            <input class="w-full h-10 pl-10 pr-4 rounded-lg border-1 border-black focus:outline-none focus:ring-2 focus:ring-white/50"
                                 placeholder="Buscar...">
                         </div>
 
                         <!-- Select de Pais y/o Confederacion -->
-                        <select class="min-w-[180px] h-11 px-3 rounded-lg border-1 border-black bg-white font-medium">
+                        <select class="min-w-[180px] h-10 px-3 rounded-lg border-1 border-black bg-white font-medium">
                             <option value="">País / Confederación</option>
                             <option value="inglaterra">Inglaterra</option>
                         </select>
 
                         <!-- Order de Inicio-Actualidad / Actualidad-Inicio -->
-                        <select class="min-w-[160px] h-11 px-3 rounded-lg border-1 border-black bg-white font-medium md:ml-auto">
+                        <select class="min-w-[160px] h-10 px-3 rounded-lg border-1 border-black bg-white font-medium md:ml-auto">
                             <option value="">Ordenar por</option>
                             <option value="anio">Inicio-Actualidad</option>
                             <option value="anio">Actualidad-Inicio</option>
                         </select>
 
                         <!-- Descargar -->
-                        <button type="button" class="min-w-[48px] h-11 bg-white rounded-lg border-1 border-black
+                        <button type="button" class="min-w-[48px] h-10 bg-white rounded-lg border-1 border-black
                                    flex items-center justify-center hover:bg-gray-100 transition shadow-sm">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
                                  stroke="currentColor" stroke-width="2">
