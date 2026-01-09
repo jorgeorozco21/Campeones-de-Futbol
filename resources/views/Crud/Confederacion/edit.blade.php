@@ -27,7 +27,7 @@
         <a href="{{ url('Crud/Confederacion/') }}" class="boton agregar">Regresar</a>
         <main class="main-especial">
             <div class="formulario-editar">
-                <h2>Editar Equipo</h2>
+                <h2>Editar Confederacion</h2>
                 <form method="post" action="{{ url('Crud/Confederacion/'.$confederacion->id) }}">
                     @csrf
                     {{ method_field('PATCH') }}
