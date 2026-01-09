@@ -13,6 +13,7 @@
                 </div>
             </div>
 
+            <!-- Tabla de Numero de Campeonatos -->
             <div class="overflow-x-auto w-[95%] mx-auto rounded-lg border border-gray-300">
                 <table class="w-full text-sm text-left text-black border-collapse bg-white rounded-lg overflow-hidden">
                     <thead class="bg-[#0B3D02] text-white">

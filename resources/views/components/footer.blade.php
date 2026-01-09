@@ -13,6 +13,7 @@
         </div>
 
         <div class="flex flex-col items-start lg:items-end gap-3 text-sm">
+            <!-- Redes Sociales -->
             <p class="font-bold text-[16px]">Síguenos en:</p>
             <div class="flex gap-4">
                 <a href="#" class="hover:opacity-70 transition">
@@ -42,6 +43,7 @@
                 </a>
             </div>
 
+            <!-- Sugerencias -->
             <div class="opacity-90 text-left lg:text-right">
                 <p class="font-bold text-[16px]">Sugerencias:</p>
                 <a href="mailto:contacto@futbolhistorico.com"
@@ -54,6 +56,7 @@
 
     <div class="w-[90%] mx-auto border-t border-white/40"></div>
 
+    <!-- Texto Copyright -->
     <div class="text-center text-sm py-4 opacity-80">
         Todos los logos utilizados en este sitio web son propiedad de sus respectivos dueños
     </div>

@@ -7,9 +7,9 @@
         <title>Competición</title>
     </head>
     <body>
+        <x-header />
         <x-competicion />
         <x-campeones />
-        <x-carta-campeon />
         <x-tabla-campeon />
         <x-sugerencias />
         <x-footer />

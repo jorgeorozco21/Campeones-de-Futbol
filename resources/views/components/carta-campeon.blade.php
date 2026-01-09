@@ -106,6 +106,15 @@
                             </span>
                         </div>
                     </div>
+
+                    <!-- CARD VACÍA -->
+                        <div class="bg-white/10 rounded-lg border-2 border-dashed border-white/30
+                                    flex flex-col items-center justify-center p-4 opacity-60 text-center">
+                            <span class="text-white font-bold text-xl">?</span>
+                            <span class="text-white text-[10px] mt-2 font-medium italic">
+                                2024/2025
+                            </span>
+                    </div>
                 </div>   
             </div>
         </div>
