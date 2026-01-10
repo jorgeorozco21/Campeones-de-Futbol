@@ -21,9 +21,7 @@
                         <li><a href="{{ url("Crud/Pais/") }}" class="link">Paises</a></li>
                         <li><a href="{{ url("Crud/Competicion/") }}" class="link">Competiciones</a></li>
                         <li><a href="{{ url("Crud/Torneo/") }}" class="link">Torneos</a></li>
-                        <li><a href="" class="link"></a></li>
-                        <li><a href="" class="link"></a></li>
-                        <li><a href="" class="link"></a></li>
+                        <li><a href="{{ url("Crud/Resultados_Liga/") }}" class="link">Resultados Liga</a></li>
                         <li><a href="" class="link"></a></li>
                         <li><a href="" class="link"></a></li>
                     </ul>
