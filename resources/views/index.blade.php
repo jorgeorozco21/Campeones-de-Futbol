@@ -4,16 +4,13 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://cdn.tailwindcss.com"></script>
-        <title>Competición</title>
+        <title>Buscador</title>
     </head>
-    <body class="flex flex-col min-h-screen">
+    <body class="bg-[#3B9D36] flex flex-col min-h-screen">
         <main class="flex-grow">
         <x-header />
         <div class="h-[68px]"></div>
-        <x-competicion />
-        <x-campeones />
-        <x-tabla-campeon />
-        <x-sugerencias />
+        <x-competiciones-main />
         </main>
         <x-footer />
     </body>

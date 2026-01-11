@@ -9,6 +9,7 @@
     <body class="bg-[#3B9D36] flex flex-col min-h-screen">
         <main class="flex-grow">
         <x-header />
+        <div class="h-[68px]"></div>
         <x-buscador-competicion />
         <x-card-competicion-horizontal />
         </main>

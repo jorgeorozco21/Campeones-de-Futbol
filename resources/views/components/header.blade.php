@@ -1,4 +1,4 @@
-<header class="w-full bg-[#0B3D02] text-white shadow-md">
+<header class="w-full bg-[#0B3D02] text-white shadow-md fixed top-0 left-0 z-40 ">
     <div class="max-w-7xl mx-auto px-4 py-4 grid grid-cols-3 items-center">
         <!-- Menu -->
         <div class="flex justify-start">

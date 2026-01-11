@@ -1,4 +1,4 @@
-<section class="w-full bg-[#3B9D36] max-w-5xl mx-auto px-4">
+<section class="w-full bg-[#3B9D36] max-w-5xl mx-auto px-4 pb-4">
     <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
         <!-- Card de Competicion -->
         <div class="bg-white rounded-lg shadow-sm hover:shadow-md transition flex items-center gap-2 px-2 py-2">
