@@ -10,6 +10,7 @@
         <main class="flex-grow">
         <x-header />
         <div class="h-[68px]"></div>
+        <x-banner-main />
         <x-competiciones-main />
         </main>
         <x-footer />
