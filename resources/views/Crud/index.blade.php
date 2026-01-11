@@ -23,7 +23,7 @@
                         <li><a href="{{ url("Crud/Torneo/") }}" class="link">Torneos</a></li>
                         <li><a href="{{ url("Crud/Resultados_Liga/") }}" class="link">Resultados Liga</a></li>
                         <li><a href="{{ url("Crud/Resultados_Grupo/") }}" class="link">Resultados Grupos</a></li>
-                        <li><a href="" class="link"></a></li>
+                        <li><a href="{{ url("Crud/Fases_Eliminacion/") }}" class="link">Fases de Eliminacion</a></li>
                     </ul>
                 </div>
             </div>

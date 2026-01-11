@@ -4,6 +4,7 @@ use App\Http\Controllers\CompeticionController;
 use App\Http\Controllers\ConfederacionController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EquipoController;
+use App\Http\Controllers\FaseEliminacionController;
 use App\Http\Controllers\PaisController;
 use App\Http\Controllers\ResultadoGrupoController;
 use App\Http\Controllers\ResultadoLigaController;
@@ -35,3 +36,5 @@ Route::resource('/Crud/Torneo',TorneoController::class);
 Route::resource('/Crud/Resultados_Liga',ResultadoLigaController::class);
 
 Route::resource('/Crud/Resultados_Grupo',ResultadoGrupoController::class);
+
+Route::resource('/Crud/Fases_Eliminacion',FaseEliminacionController::class);
