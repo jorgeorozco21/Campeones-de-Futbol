@@ -18,8 +18,16 @@ Route::get('/Crud', function () {
     return view('Crud.index');
 });
 
+Route::get('/principal', function () {
+    return view('principal');
+});
+
 Route::get('/competicion', function () {
     return view('competicion');
+});
+
+Route::get('/buscador', function () {
+    return view('buscador');
 });
 
 Route::resource('/Crud/Equipo',EquipoController::class);
