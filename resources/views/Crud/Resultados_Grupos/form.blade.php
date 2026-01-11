@@ -10,6 +10,8 @@
     <option value="{{ $torneo->id }}">{{ $torneo->Nombre }} {{ $torneo->Edicion }}</option>
     @endforeach
 </select>
+<label for="grupo">Grupo</label>
+<input type="text" id="grupo" name="Grupo">
 <label for="ganados">Partidos Ganados</label>
 <input type="number" id="ganados" name="Ganados" value="0">
 <label for="perdidos">Partidos Perdidos</label>
@@ -27,12 +29,7 @@
 <label for="clasificacion">Clasificacion</label>
 <select id="clasificacion" name="Clasificacion">
     <option value="Sin Clasificacion">Sin Clasificacion</option>
-    <option value="Descenso">Descenso</option>
-    <option value="Campeon">Campeon</option>
-    <option value="Champions League">Champions League</option>
-    <option value="Europa League">Europa League</option>
-    <option value="Conferens League">Conferens League</option>
-    <option value="Recopa de Europa">Recopa de Europa</option>
+    <option value="Avanza Ronda">Avanza Ronda</option>
 </select>
 <input type="hidden" value="0" name="ID_Resultado">
 <input type="submit" class="boton editar" value="{{ $modo }} Datos">

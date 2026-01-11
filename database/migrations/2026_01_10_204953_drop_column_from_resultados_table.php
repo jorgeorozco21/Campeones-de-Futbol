@@ -12,7 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('resultados', function (Blueprint $table) {
-            $table->string("Clasificacion")->change();
+            $table -> dropColumn('Clasificacion');
+            $table -> string('Clasificacion');
         });
     }
 
@@ -22,7 +23,8 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('resultados', function (Blueprint $table) {
-            $table->enum("Clasificacion",['Descenso','Campeon','Champions','Europa','Conferens','Recopa'])->change();
+            $table -> dropColumn('Clasificacion');
+            $table->enum("Clasificacion",['Descenso','Campeon','Champions','Europa','Conferens','Recopa']);
         });
     }
 };
