@@ -10,10 +10,10 @@
         <main class="flex-grow">
         <x-header />
         <div class="h-[68px]"></div>
-        <x-competicion />
-        <x-campeones />
-        <x-tabla-campeon />
-        <x-sugerencias />
+        <x-competicion :competicion="$competicion" />
+        <x-campeones :torneos="$torneos" />
+        <x-tabla-campeon :campeones="$campeones" />
+        <x-sugerencias :sugerencias="$sugerencias" />
         </main>
         <x-footer />
     </body>

@@ -21,18 +21,19 @@
                             <th class="px-4 py-2 rounded-tl-lg">Logo</th>
                             <th class="py-2">Equipo</th>
                             <th class="px-4 py-2">Títulos</th>
-                            <th class="px-4 py-2 rounded-tr-lg">Años Ganados</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="border-b border-gray-300 hover:bg-gray-100 transition">
-                            <td class="px-4 py-2">
-                                <img src="images/premier_league.webp" alt="Sheffield" class="h-10 w-10 object-contain">
-                            </td>
-                            <td class="py-2">Sheffield Wednesday</td>
-                            <td class="px-4 py-2">1</td>
-                            <td class="px-4 py-2">2020-2021</td>
-                        </tr>
+                        @props(['campeones'])
+                        @foreach ($campeones as $campeon)    
+                            <tr class="border-b border-gray-300 hover:bg-gray-100 transition">
+                                <td class="px-4 py-2">
+                                    <img src="{{ asset('storage/'.$campeon->Escudo) }}" alt="{{ $campeon->Nombre }}" class="h-10 w-10 object-contain">
+                                </td>
+                                <td class="py-2">{{ $campeon->Nombre }}</td>
+                                <td class="px-4 py-2">{{ $campeon->titulos }}</td>
+                            </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>

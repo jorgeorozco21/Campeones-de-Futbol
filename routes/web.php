@@ -22,9 +22,7 @@ Route::get('/principal', function () {
     return view('principal');
 });
 
-Route::get('/competicion', function () {
-    return view('competicion');
-});
+Route::get('/competicion/{id}',[TorneoController::class, 'informacionTorneos']);
 
 Route::get('/buscador', function () {
     return view('buscador');

@@ -13,25 +13,16 @@
 
             <!-- Competiciones del Mismo Pais -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-[95%] max-w-[952px]">
-
-                <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-4 flex flex-col items-center text-center">
-                    <img src="images/fa_cup.webp" alt="FA Cup" class="h-16 mb-3">
-                    <h3 class="font-bold text-lg">FA Cup</h3>
-                    <p class="text-sm text-gray-600">Inglaterra</p>
-                </div>
-
-                <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-4 flex flex-col items-center text-center">
-                    <img src="images/efl_cup.webp" alt="EFL Cup" class="h-16 mb-3">
-                    <h3 class="font-bold text-lg">EFL Cup</h3>
-                    <p class="text-sm text-gray-600">Inglaterra</p>
-                </div>
-
-                <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-4 flex flex-col items-center text-center">
-                    <img src="images/community_shield.webp" alt="Community Shield" class="h-16 mb-3">
-                    <h3 class="font-bold text-lg">Community Shield</h3>
-                    <p class="text-sm text-gray-600">Inglaterra</p>
-                </div>
-
+                @props(['sugerencias'])
+                @foreach ($sugerencias as $sugerencia)    
+                    <a href="#" class="bg-white rounded-xl shadow hover:shadow-lg transition p-4 flex flex-col items-center text-center">
+                    <!--<div class="bg-white rounded-xl shadow hover:shadow-lg transition p-4 flex flex-col items-center text-center">-->
+                        <img src="{{ asset('storage/'.$sugerencia->Logo) }}" alt="{{ $sugerencia->nombreCompeticion }}" class="h-16 mb-3">
+                        <h3 class="font-bold text-lg">{{ $sugerencia->nombreCompeticion }}</h3>
+                        <p class="text-sm text-gray-600">{{ $sugerencia->nombrePais }}</p>
+                    <!--</div>-->
+                </a>
+                @endforeach
             </div>
         </div>
     </div>

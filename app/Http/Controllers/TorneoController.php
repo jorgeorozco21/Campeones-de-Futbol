@@ -133,4 +133,68 @@ class TorneoController extends Controller
 
         return redirect()->route('Torneo.index')->with('success',"Torneo borrado correctamente");
     }
+
+    /**
+     * Extraer la infromacion para las tarjetas de la pagina de competicion
+     */
+    public function informacionTorneos($id)
+    {
+        $competicion = 
+            DB::table('competiciones as c')
+            ->join('confederaciones as con','con.id','=','c.ID_Confederacion')
+            ->select(
+                'c.Nombre',
+                'c.Logo',
+                'c.ID_Pais',
+                'c.Descripcion',
+                'con.Nombre as nombreConfederacion'
+            )
+            ->where('c.id','=',$id)
+            ->first()
+        ;
+
+        $torneos = 
+            DB::table('torneos as t')
+            ->join('equipos as e',"e.id","=","t.ID_Equipo")
+            ->select( 
+                "t.id",
+                "e.Nombre",
+                "e.Escudo",
+                "t.Edicion"
+            )
+            ->where("t.ID_Competicion","=",$id)
+            ->get()
+        ;
+
+        $campeones =
+            DB::table('torneos as t')
+            ->join('equipos as e',"e.id","=","t.ID_Equipo")
+            ->select(
+                'e.Nombre',
+                'e.Escudo',
+                DB::raw('COUNT(*) as Titulos')
+            )
+            ->where("t.ID_Competicion","=",$id)
+            ->groupBy('t.ID_Equipo',"e.Nombre",'e.Escudo')
+            ->orderByRaw('COUNT(*) DESC')
+            ->get()
+        ;
+
+        $sugerencias = 
+            DB::table('competiciones as c')
+            ->join('paises as p',"p.id","=","c.ID_Pais")
+            ->select(
+                "c.id",
+                "c.Logo",
+                "c.Nombre as nombreCompeticion",
+                "p.Nombre as nombrePais"
+            )
+            ->where("c.Nombre","!=",$competicion->Nombre)
+            ->where("c.ID_Pais","=",$competicion->ID_Pais)
+            ->orWhere('p.Nombre','=',$competicion->nombreConfederacion)
+            ->get()
+        ;
+
+        return view('competicion',compact('torneos','campeones','sugerencias','competicion'));
+    }
 }
