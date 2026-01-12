@@ -3,7 +3,7 @@
     <div class="relative h-[180px] sm:h-[240px] md:h-[320px] lg:h-[420px] overflow-hidden">
         <!-- Banners -->
         <div id="banner"
-             class="flex h-full transition-transform duration-700 ease-in-out">
+            class="flex h-full transition-transform duration-700 ease-in-out">
             <!-- Banner 1 -->
             <div class="min-w-full h-full">
                 <img src="{{ asset('images/banner/banner_4.png') }}" class="w-full h-full object-cover">

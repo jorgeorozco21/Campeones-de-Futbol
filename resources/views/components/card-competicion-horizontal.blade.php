@@ -4,8 +4,8 @@
         <div class="bg-white rounded-lg shadow-sm hover:shadow-md transition flex items-center gap-2 px-2 py-2">
             <!-- Logo -->
             <img src="images/premier_league.webp"
-                 alt="Premier League"
-                 class="w-8 h-8 object-contain">
+                alt="Premier League"
+                class="w-8 h-8 object-contain">
 
             <!-- Nombre -->
             <span class="text-xs font-semibold text-gray-800 truncate" title="Premier League">
@@ -22,8 +22,8 @@
         <div class="bg-white rounded-lg shadow-sm hover:shadow-md transition flex items-center gap-2 px-2 py-2">
             <!-- Logo -->
             <img src="images/premier_league.webp"
-                 alt="Premier League"
-                 class="w-8 h-8 object-contain">
+                alt="Premier League"
+                class="w-8 h-8 object-contain">
 
             <!-- Nombre -->
             <span class="text-xs font-semibold text-gray-800 truncate" title="Premier League">
@@ -40,8 +40,8 @@
         <div class="bg-white rounded-lg shadow-sm hover:shadow-md transition flex items-center gap-2 px-2 py-2">
             <!-- Logo -->
             <img src="images/premier_league.webp"
-                 alt="Premier League"
-                 class="w-8 h-8 object-contain">
+                alt="Premier League"
+                class="w-8 h-8 object-contain">
 
             <!-- Nombre -->
             <span class="text-xs font-semibold text-gray-800 truncate" title="Premier League">
@@ -58,8 +58,8 @@
         <div class="bg-white rounded-lg shadow-sm hover:shadow-md transition flex items-center gap-2 px-2 py-2">
             <!-- Logo -->
             <img src="images/premier_league.webp"
-                 alt="Premier League"
-                 class="w-8 h-8 object-contain">
+                alt="Premier League"
+                class="w-8 h-8 object-contain">
 
             <!-- Nombre -->
             <span class="text-xs font-semibold text-gray-800 truncate" title="Premier League">
@@ -76,8 +76,8 @@
         <div class="bg-white rounded-lg shadow-sm hover:shadow-md transition flex items-center gap-2 px-2 py-2">
             <!-- Logo -->
             <img src="images/premier_league.webp"
-                 alt="Premier League"
-                 class="w-8 h-8 object-contain">
+                alt="Premier League"
+                class="w-8 h-8 object-contain">
 
             <!-- Nombre -->
             <span class="text-xs font-semibold text-gray-800 truncate" title="Premier League">
@@ -94,8 +94,8 @@
         <div class="bg-white rounded-lg shadow-sm hover:shadow-md transition flex items-center gap-2 px-2 py-2">
             <!-- Logo -->
             <img src="images/premier_league.webp"
-                 alt="Premier League"
-                 class="w-8 h-8 object-contain">
+                alt="Premier League"
+                class="w-8 h-8 object-contain">
 
             <!-- Nombre -->
             <span class="text-xs font-semibold text-gray-800 truncate" title="Premier League">

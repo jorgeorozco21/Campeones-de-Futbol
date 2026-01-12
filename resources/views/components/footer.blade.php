@@ -47,7 +47,7 @@
             <div class="opacity-90 text-left lg:text-right">
                 <p class="font-bold text-[16px]">Sugerencias:</p>
                 <a href="mailto:contacto@futbolhistorico.com"
-                   class="underline hover:opacity-80 transition">
+                class="underline hover:opacity-80 transition">
                     contacto@futbolhistorico.com
                 </a>
             </div>

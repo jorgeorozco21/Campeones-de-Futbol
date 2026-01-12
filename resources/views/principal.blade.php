@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://cdn.tailwindcss.com"></script>
-        <title>Buscador</title>
+        <title>Principal</title>
     </head>
     <body class="bg-[#3B9D36] flex flex-col min-h-screen">
         <main class="flex-grow">
